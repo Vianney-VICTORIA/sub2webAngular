@@ -1,5 +1,6 @@
 (function() {
   'use strict';
+  
 
   angular.element(document).ready(function() {
     angular.bootstrap(document, ['app']);
@@ -13,10 +14,10 @@
       .state('root', {
         views: {
           'header': {
-            template: '<div>Header</div>',
+            template: '<app-header></app-header>',
           },
           'footer': {
-            template: '<div>Footer</div>',
+            template: '<app-footer></app-footer>',
           }
         }
       });
@@ -33,6 +34,12 @@
   angular.module('app', [
       'ui.router',
       'home',
+      'appHeaderComponent',
+      'movie-popular',
+      'people-popular',
+      'tv-show',
+      'foundation',
+      'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',
       'templates'
@@ -42,3 +49,5 @@
     .controller('MainCtrl', MainCtrl)
     .value('version', '1.1.0');
 })();
+
+

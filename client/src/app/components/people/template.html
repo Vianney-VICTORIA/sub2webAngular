@@ -1,0 +1,8 @@
+<div>
+	<h1>Popular people</h1>	
+	<ul>
+		<li data-ng-repeat="people in ::vm.people track by $index">
+			<img ng-src="https://image.tmdb.org/t/p/w370{{ ::people.profile_path }}"/>
+		</li>
+	</ul>
+</div>

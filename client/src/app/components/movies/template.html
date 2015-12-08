@@ -1,0 +1,11 @@
+<div>
+	<h1>Popular Movie</h1>
+	
+	<ul>
+		<li data-ng-repeat="movie in ::vm.movies track by $index">
+			<img ng-src="https://image.tmdb.org/t/p/w370{{ ::movie.backdrop_path }}"/>
+			<h2>{{ ::movie.original_title }}</h2>
+			<p>{{ ::movie.overview }}</p>
+		</li>
+	</ul>
+</div>
